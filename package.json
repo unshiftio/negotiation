@@ -1,6 +1,6 @@
 {
   "name": "negotiation",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Specification/protocol negotiation based on features and versions",
   "main": "index.js",
   "scripts": {
