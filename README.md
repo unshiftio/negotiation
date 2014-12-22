@@ -87,6 +87,14 @@ If no available protocols are given we will check all our supported protocols
 and return the one we prefer. If no matching protocol is found we will return
 `undefined` all other matches will return the set `protocol`.
 
+### negotiation.get
+
+Get a registered protocol based on the unique id.
+
+```js
+n.get('foo@0.1.1');
+```
+
 ### negotiation.available
 
 Return the id's of all available protocols that we send for the negotiation. By

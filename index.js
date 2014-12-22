@@ -32,6 +32,17 @@ Negotiation.prototype.register = function register(name, protocol) {
 };
 
 /**
+ * Return the protocol based on the id.
+ *
+ * @param {String} id Unique id of protocol.
+ * @returns {Object} Protocol
+ * @api public
+ */
+Negotiation.prototype.get = function get(id) {
+  return this.protocols[id];
+};
+
+/**
  * Select the best protocol from the list of available protocols. If no
  * available protocols has been given we return the most optimal from all the
  * protocols that we support.

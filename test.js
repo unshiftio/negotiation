@@ -43,6 +43,18 @@ describe('negotiation', function () {
     });
   });
 
+  describe('#get', function () {
+    it('returns the protocol by id', function () {
+      n.register('foo', { version: '0.1.0', bar: 'foo' });
+
+      var protocol = n.get('foo@0.1.0');
+
+      assume(protocol).is.a('object');
+      assume(protocol.version).equals('0.1.0');
+      assume(protocol.bar).equals('foo');
+    });
+  });
+
   describe('#parse', function () {
     it('returns a nummeric value for ranges', function () {
       assume(n.parse('foo@0.0.0')).is.a('number');
